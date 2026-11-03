@@ -1,6 +1,6 @@
 # Status
 
-Last updated: **2026-10-23**
+Last updated: **2026-11-03**
 
 ## Open gaps
 
@@ -11,6 +11,19 @@ At most three in flight per repo (`AGENTS.md`, "The IR-increment loop"). Backlog
 | — | — | — | — | — |
 
 ## Review thread
+
+**2026-11-03 — ChatGPT: maintainer source intake — Auto Ontology; context applicability and evidence lifecycle backlog.**
+
+**Basis / impact.** Survey §4.6, §5.1.5 and §5.8.2; existing `docs/SURVEY_MAP.md` T1/T2/T3/T9 and P2. Research intake only: no schema fields change, no Choreo consume-contract or bench-walk change, and no new IR increment is claimed. Relevant `docs/RISKS.md` constraints: replay after a model swap, logs must not be sold as controller improvement, and no attribution with simultaneous model/compiler changes. Application search may consume certified context; memory refresh alone is not controller promotion.
+
+**Source and boundary.** Maintainer-requested intake of [NVIDIA Auto Ontology](https://github.com/NVIDIA/auto-ontology), reviewed 2026-11-03; upstream main observed at `cdaf61e1bd0cf3820d11d72b43bb460816aebbd3`. Read README, MCP README, [query-validation guidance](https://github.com/NVIDIA/auto-ontology/blob/main/skills/nvidia-ontology-query/references/query-validation.md) (blob `e019716893c3bded61054ee4a68184887ad6ca0d`) and [publication/readback guidance](https://github.com/NVIDIA/auto-ontology/blob/main/skills/nvidia-ontology-management/references/publication.md) (blob `87001d006d531e937f281191fbaddb5fc19de0be`). It supplies enterprise metadata/semantic context and natural-language SQL tooling. Treat these documented workflows as adjacent mechanisms, not independently verified enforcement. No deployment or benchmark was run. README points to ontology-sql-eval; no SQL result is imported as a compiler result. The MCP README's “NVIDIA-internal today” note conflicts with the accessible public tree and needs freshness checking before any packaging recommendation.
+
+**Concrete question for design review.** `docs/LINTEL_IR.md` already distinguishes `memory_id` (audit, outside cache key), `policy_id` (retrieval/decision rules), and `contract_id`; landed keys must replay the same artifact. Determine whether existing record schemas can express a retrieved claim's workload/shape/dtype/target/compiler applicability, metric unit and denominator, source/parent identity, validation scope, validity and supersession without ambiguous free text. This is a candidate gap to audit, not an assertion that all fields are absent. Reuse existing lineage, measurement-label and verifier-identity work (L-002/L-008/L-011) before opening another gap.
+
+**Proposed evaluation, not an adopted design.** A handwritten carrier should offer a measured kernel result, an application result, a prediction, and a superseded recommendation with similar names but different scopes. It must prevent unsupported transfer across targets, distinguish recommendation from verification/admission, and preserve the landed-key replay law when memory changes. A retrieval-rule change belongs to a new policy; a new memory snapshot alone cannot overwrite an admitted digest. Context tools may suggest candidates but cannot grant admission or relax checks. No full ontology dependency or new cache-key field is selected.
+
+**Falsifier to debate if a gap is established.** Compare flat retrieval, typed records with deterministic applicability filters, and ontology-guided retrieval under the same corpus/proposer/actions/feedback and total budget. If the ontology adds no reduction in invalid reuse or no improvement in admitted application performance/search cost over typed records, prefer the simpler records. No automatic controller promotion without its separate holdout and existing gate. Next: audit existing schemas, then file only a demonstrated gap and use gap → versioned change → carrier → falsifier before an increment PR. No schema/PDF/build changes are part of this intake.
+
 
 **2026-10-23 06:55 UTC — Claude (Cowork session): MERGE SUMMARY — IR-increment loop, squash commit `92f30b1` (PR #2).**
 
