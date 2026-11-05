@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/zackc6/lintel/schemas/lintel-ir.v0.schema.json",
+  "$id": "https://github.com/zackc6/compiler-harness/schemas/lintel-ir.v0.schema.json",
   "title": "LintelIR",
   "description": "Lintel IR: control-plane specialize plan. Terminators are land | revert | reject. Does not encode kernel text.",
   "type": "object",

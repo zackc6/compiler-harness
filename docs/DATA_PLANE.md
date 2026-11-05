@@ -2,7 +2,7 @@
 
 The **goal** is an agentic compiler ([ARCHITECTURE.md](ARCHITECTURE.md)). **Control plane** (Lintel IR) is the year-1 PoC: CFG, `cost`, frozen ADG. That IR **does not compile kernels**. It says *whether* to search, *which* allowlisted kernel to try, *when* to stop, and *what* to pin. The procedure those rules implement is `policy_id`. Changing it automatically is a different module ([SURVEY_MATCH.md](SURVEY_MATCH.md)).
 
-**Compiler substrate** (this file’s “data plane”) is the kernel schedule in year 1. The survey no longer requires a fixed L1–L7 layer count; L4 is our name for that schedule. Live face: **[Choreo IR](https://github.com/zackc6/choreo)** — a typed kernel choreography AST. Pros, cons, and remaining work: [CHOREO.md](CHOREO.md). **Lowering** is a classical sink (GPU cubin or NPU binary). Triton / Tile / HIP / Cake IR are **sinks or later adapters**, not the agent-facing IR.
+**Compiler substrate** (this file’s “data plane”) is the kernel schedule in year 1. The survey no longer requires a fixed L1–L7 layer count; L4 is our name for that schedule. Live face: **[compiler-foundation](https://github.com/zackc6/compiler-foundation)** — a typed kernel choreography AST. Pros, cons, and remaining work: [CHOREO.md](CHOREO.md). **Lowering** is a classical sink (GPU cubin or NPU binary). Triton / Tile / HIP / Cake IR are **sinks or later adapters**, not the agent-facing IR.
 
 ---
 
@@ -21,7 +21,7 @@ We do not copy the `choreoir` package into this tree.
 
 ## Year-1 data-plane PoC (build with the control PoC)
 
-**Live L4:** one adapter, `@choreo.v0` ([choreo](https://github.com/zackc6/choreo) `choreoir==0.1.0`). Year-1: **one NVIDIA binary first.** A printer that comments `Barrier` / `Pipeline.depth` is **not** a sink — Acme `choreo.attn.d3.w4` must lower to a 3-stage producer-consumer kernel (or we flip to `@triton.v0` knobs at M2). Not Cake IR. Not Tile. Not HIP/Ascend as a second live path.
+**Live L4:** one adapter, `@choreo.v0` ([compiler-foundation](https://github.com/zackc6/compiler-foundation) `choreoir==0.1.0`). Year-1: **one NVIDIA binary first.** A printer that comments `Barrier` / `Pipeline.depth` is **not** a sink — Acme `choreo.attn.d3.w4` must lower to a 3-stage producer-consumer kernel (or we flip to `@triton.v0` knobs at M2). Not Cake IR. Not Tile. Not HIP/Ascend as a second live path.
 
 **What the agent fills:** a complete **Kernel** (buffers, layout×stride, partitions/roles, Copy / Barrier / Mma / Pipeline). Year-1 still **allowlists two complete records** (C3-B). Typed ≠ unbounded AST search. The type exists so a reject can name `{where, hint}` and so git can read roles, barriers, and pipeline depth.
 

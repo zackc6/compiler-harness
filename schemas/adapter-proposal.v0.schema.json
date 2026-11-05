@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/zackc6/lintel/schemas/adapter-proposal.v0.schema.json",
+  "$id": "https://github.com/zackc6/compiler-harness/schemas/adapter-proposal.v0.schema.json",
   "title": "Lintel adapter proposal v0 (Choreo Kernel AST)",
   "description": "Year-1 data-plane payload for propose. Choreo Kernel JSON. Not Cake IR. Not Triton source. Triton schedule knobs are degenerate (examples/later).",
   "type": "object",

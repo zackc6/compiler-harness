@@ -2,7 +2,7 @@
 
 **Lintel IR** is the control-plane IR of a next-generation agentic compiler ([ARCHITECTURE.md](ARCHITECTURE.md)). The architecture’s function coverage and three loops live there. This document is the application-walk language: one job, pinned contract, pinned procedure, pinned compiler.
 
-A representation the proposer may edit is a **[Choreo](https://github.com/zackc6/choreo) Kernel AST** ([DATA_PLANE.md](DATA_PLANE.md), [CHOREO.md](CHOREO.md)). A mapping to hardware consumes the schedule (roles, barriers, `Pipeline.depth`) and emits a binary. `print_triton` that comments those fields is not that mapping. Other representations plug in behind `adapter`. They are not Lintel IR.
+A representation the proposer may edit is a **[compiler-foundation](https://github.com/zackc6/compiler-foundation) Kernel AST** ([DATA_PLANE.md](DATA_PLANE.md), [CHOREO.md](CHOREO.md)). A mapping to hardware consumes the schedule (roles, barriers, `Pipeline.depth`) and emits a binary. `print_triton` that comments those fields is not that mapping. Other representations plug in behind `adapter`. They are not Lintel IR.
 
 A module is one application plan at a cache key `%k`. The [PoC](POC.md) is one executable module (CFG + `cost` + compile to ADG) on a kernel surface. A linear block is a CFG with one `^entry`. A proposer — agent, learned policy, or structured search — fills candidates. Gates, measurement, and fallback stay on this plan, and the plan **compiles to an ADG**. Deploy does not interpret Lintel IR. Deploy is `lookup(%k)`.
 

@@ -6,7 +6,7 @@ The JSON is the **lowering** of a [Lintel IR](LINTEL_IR.md) module (`land` → `
 
 ## Freeze (this one ships)
 
-Partner already serves Llama-class decode on SGLang. Attention prefill is ~40% of GPU time. Overnight CI proposed one **allowlisted** [Choreo](https://github.com/zackc6/choreo) **Kernel AST** (partitions, layouts, Copy/Barrier/Mma, pipeline depth — not an opaque string). `choreoir.check` `{where}` gates passed. Oracles passed. Serving \(F\) is up ~8% with quality parity. They merge the digest, not the chat.
+Partner already serves Llama-class decode on SGLang. Attention prefill is ~40% of GPU time. Overnight CI proposed one **allowlisted** [compiler-foundation](https://github.com/zackc6/compiler-foundation) **Kernel AST** (partitions, layouts, Copy/Barrier/Mma, pipeline depth — not an opaque string). `choreoir.check` `{where}` gates passed. Oracles passed. Serving \(F\) is up ~8% with quality parity. They merge the digest, not the chat.
 
 The machine JSON (full Kernel AST in `actions[]`) is [`examples/admit-record.json`](../examples/admit-record.json). Excerpt:
 

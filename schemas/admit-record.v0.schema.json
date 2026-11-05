@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/zackc6/lintel/schemas/admit-record.v0.schema.json",
+  "$id": "https://github.com/zackc6/compiler-harness/schemas/admit-record.v0.schema.json",
   "title": "LintelAdmitRecord",
   "description": "Versioned, customer-owned contract for one specialize attempt. If it is not in this record, it did not happen.",
   "type": "object",

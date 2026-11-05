@@ -1,6 +1,6 @@
 # Choreo IR — the kernel program, not the whole compiler
 
-Sibling tree: [zackc6/choreo](https://github.com/zackc6/choreo) (`choreoir` 0.1.0). Read it there. **Do not copy that package into this repo.**
+Sibling tree: [zackc6/compiler-foundation](https://github.com/zackc6/compiler-foundation) (`choreoir` 0.1.0). Read it there. **Do not copy that package into this repo.**
 
 The **goal** is a next-generation agentic compiler ([ARCHITECTURE.md](ARCHITECTURE.md)). Choreo is the **typed kernel the agent edits** (tiles, roles, barriers, layouts) plus checks before codegen. It is not Lintel, not the cubin sink, and not serving \(F\). Lintel IR stays the control plane (CFG, `cost`, ADG, `%k`, `land` / `revert` / `reject`). Choreo’s own spec forbids control-plane work in that tree. The split is the product.
 
@@ -190,7 +190,7 @@ Live `adapter_id`: **`@choreo.v0`**. Year-1 still **one** live adapter, **one NV
 
 ## Undergo (Choreo is the artifact, Lintel is the process)
 
-**“Undergo” means Choreo is what changes, not what decides.** Compiler evolution is PRs into [zackc6/choreo](https://github.com/zackc6/choreo) (`choreoir`). It is not Choreo waking up and rewriting itself during a search.
+**“Undergo” means Choreo is what changes, not what decides.** Compiler evolution is PRs into [zackc6/compiler-foundation](https://github.com/zackc6/compiler-foundation) (`choreoir`). It is not Choreo waking up and rewriting itself during a search.
 
 Cake’s outer loop produces **compiler changes**. In this split those changes land *on* Choreo:
 

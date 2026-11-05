@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/zackc6/lintel/schemas/session-event.v0.schema.json",
+  "$id": "https://github.com/zackc6/compiler-harness/schemas/session-event.v0.schema.json",
   "title": "LintelSessionEvent",
   "description": "Append-only session log. Model-visible context must be reconstructable from this stream (DeepSeek Harness invariant).",
   "type": "object",
