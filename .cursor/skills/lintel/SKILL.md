@@ -54,7 +54,7 @@ Keep the bet: the *goal* is the agentic compiler. The architecture picture cover
 
 ## Codesign (Lintel × Choreo)
 
-Write-up: [docs/CHOREO.md](docs/CHOREO.md) (verdict, vs Cake/TIRx, **Undergo**). Sibling compiler: [zackc6/choreo](https://github.com/zackc6/choreo) — **read there, do not copy**.
+Write-up: [docs/CHOREO.md](docs/CHOREO.md) (verdict, vs Cake/TIRx, **Undergo**). Sibling compiler: [zackc6/compiler-foundation](https://github.com/zackc6/compiler-foundation) — **read there, do not copy**.
 
 Cake (arXiv:2608.12629) splits in three. Only one is a Lintel object:
 

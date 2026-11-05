@@ -10,7 +10,7 @@ Year-1: **one** live adapter. Coverage: more `adapter_id`s, never one IR for all
 
 | `adapter_id` | Agent-facing type | Lowers with | Status |
 |---|---|---|---|
-| `@choreo.v0` | [Choreo](https://github.com/zackc6/choreo) Kernel AST (buffers, layout, partitions, Copy/Mma/Barrier/Pipeline) | `choreoir.check` then Triton printer (first sink) | **PoC live** |
+| `@choreo.v0` | [compiler-foundation](https://github.com/zackc6/compiler-foundation) Kernel AST (buffers, layout, partitions, Copy/Mma/Barrier/Pipeline) | `choreoir.check` then Triton printer (first sink) | **PoC live** |
 
 Gate checks are Choreo Finding bands: `W`, `L`, `S`, `V`. After a printer exists, also `compile_ok`. Implementation = `choreoir` + vendor toolchain, not a new checker IR in this repo.
 

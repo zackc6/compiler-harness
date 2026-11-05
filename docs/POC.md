@@ -5,7 +5,7 @@ The **goal** is an agentic compiler ([ARCHITECTURE.md](ARCHITECTURE.md)). Linear
 Serve is still `lookup(%k)`. This PoC is the **application** loop: the proposer fills allowlisted slots; check, lower, and measurement stay classical. The controller-development module is not part of it ([SURVEY_MATCH.md](SURVEY_MATCH.md)). The classical compiler still lowers the **printed** adapter IR (Triton first sink). This PoC is:
 
 1. **Control:** walk a CFG, evaluate `cost`, compile the plan to an ADG.
-2. **Data plane:** [Choreo](https://github.com/zackc6/choreo) **Kernel AST** + `adapter_gate` `{where: W|L|S|V}`. Spec: [DATA_PLANE.md](DATA_PLANE.md), [CHOREO.md](CHOREO.md).
+2. **Data plane:** [compiler-foundation](https://github.com/zackc6/compiler-foundation) **Kernel AST** + `adapter_gate` `{where: W|L|S|V}`. Spec: [DATA_PLANE.md](DATA_PLANE.md), [CHOREO.md](CHOREO.md).
 
 Why the control IR is worth doing: [WHY.md](WHY.md).
 

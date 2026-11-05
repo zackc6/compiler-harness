@@ -153,7 +153,7 @@ Selector on SLA; JSON schema is the grammar constraint; verify at the same strat
 | Paper / artifact | arXiv / URL | Kind |
 |---|---|---|
 | Cake | [2608.12629](https://arxiv.org/abs/2608.12629) | 1 |
-| Choreo IR | [github.com/zackc6/choreo](https://github.com/zackc6/choreo) | 1 (year-1 Lintel face) |
+| compiler-foundation (formerly Choreo IR) | [github.com/zackc6/compiler-foundation](https://github.com/zackc6/compiler-foundation) | 1 (year-1 Lintel face) |
 | TIRx | [tvm.apache.org/2026/06/22/tirx](https://tvm.apache.org/2026/06/22/tirx) | 1 (public compiler substitute) |
 | Argus | [2604.18616](https://arxiv.org/abs/2604.18616) | 1 |
 | Zomboss | [2608.00894](https://arxiv.org/abs/2608.00894) | 2 |
