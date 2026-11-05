@@ -1,10 +1,10 @@
-# Lintel
+# compiler-harness
 
 **Goal:** a next-generation **agentic compiler**. It chooses actions, synthesizes implementations, and evaluates them under a fixed contract. It can change its compiler tools or its decision procedure only in separate measured loops. Deploy loads an accepted artifact and a fallback, with no optimizer-model on the hot path.
 
-Lintel is the **control plane**: what to try, what to ship, what to roll back, and what may change across jobs. The early-stage picture and its function coverage are [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). [compiler-foundation](https://github.com/zackc6/compiler-foundation) (formerly Choreo) is the data-plane foundation the proposer edits through its rules. Mapping to hardware is a replaceable component. This repository is the written contract (`schemas/` / `examples/`) plus that design. It does not run CI and it does not emit binaries. Evidence: [ai-compiler-survey](https://github.com/zackc6/ai-compiler-survey) (read in place; this repo does not copy it).
+compiler-harness (formerly Lintel) is the **self-evolving compiler harness**, the **control plane**: what to try, what to ship, what to roll back, and what may change across jobs. The early-stage picture and its function coverage are [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). [compiler-foundation](https://github.com/zackc6/compiler-foundation) (formerly Choreo) is the data-plane foundation the proposer edits through its rules. Mapping to hardware is a replaceable component. This repository is the written contract (`schemas/` / `examples/`) plus that design. It does not run CI and it does not emit binaries. Evidence: [ai-compiler-survey](https://github.com/zackc6/ai-compiler-survey) (read in place; this repo does not copy it).
 
-> **Naming (2026-11-05).** The data-plane repository was renamed from `choreo` to `compiler-foundation` by the maintainer. Lintel is the self-evolving compiler harness (control plane); compiler-foundation is the extensible core foundation (data plane). The v0.1 code keeps its identifiers (`choreoir`, `choreo.v*` schema tags) until the v0.1 AST is replaced; "Choreo" in older records means this repository.
+> **Naming (2026-11-05).** The maintainer renamed the repositories: `lintel` is now **`compiler-harness`**, the self-evolving compiler harness (control plane), and `choreo` is now **`compiler-foundation`**, the extensible core foundation (data plane). Code identifiers (`choreoir`, `choreo.v*` and `lintel-ir.*` schema names, the `lintel/` and `choreo/` submodule paths) stay until the v0.1 designs are replaced; "Lintel" and "Choreo" in older records mean these repositories.
 
 ```mermaid
 flowchart TB

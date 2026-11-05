@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/zackc6/lintel/schemas/lintel-ir.poc.schema.json",
+  "$id": "https://github.com/zackc6/compiler-harness/schemas/lintel-ir.poc.schema.json",
   "title": "LintelIRPoC",
   "description": "PoC control-plane IR: CFG + cost + compile-to-ADG. Terminators land | revert | reject. Not kernel text.",
   "type": "object",
